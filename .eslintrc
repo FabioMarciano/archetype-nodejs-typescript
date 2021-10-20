@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-var-requires": 0,
+    "complexity": [
+      "warn",
+      5
+    ],
+    "no-duplicate-imports": "error",
+    "keyword-spacing": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ]
+  },
+  "env": {
+    "node": true
+  }
+}

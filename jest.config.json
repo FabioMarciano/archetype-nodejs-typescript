@@ -1,0 +1,19 @@
+{
+	"preset": "ts-jest",
+	"testMatch": ["**/__tests__/**/*.+(ts|tsx|js)", "**/?(*.)+(spec|test).+(ts|js)"],
+	"transform": {
+		"^.+\\.(ts|tsx)$": "ts-jest"
+	},
+	"testEnvironment": "node",
+	"collectCoverageFrom": ["src/**/*.{ts,tsx}"],
+	"coverageThreshold": {
+		"global": {
+			"branches": 90,
+			"functions": 90,
+			"lines": 90,
+			"statements": 90
+		}
+	},
+	"coveragePathIgnorePatterns": ["<rootDir>/src/index.ts"],
+	"testPathIgnorePatterns": ["<rootDir>/src/index.ts"]
+}
