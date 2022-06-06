@@ -4,15 +4,16 @@
 
 import log from './Utils/log';
 import express from 'express';
-import routers from './Routers';
+import Routers from './Routers';
 
-const http = express();
-const port = Number(process.env.PORT || 3000);
+const app = express();
+const { port = '3000' } = { port: process.env.PORT };
+const { base = '/api' } = { base: process.env.API_BASE };
 
-http.use(routers);
+app.use(base, Routers);
 
 try {
-	http.listen(port, () => {
+	app.listen(port, () => {
 		log.info(`Server started at ${port} port`);
 	});
 } catch (error) {

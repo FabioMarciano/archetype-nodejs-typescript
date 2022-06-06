@@ -7,6 +7,6 @@ services:
     volumes:
       - ./:/app
     expose:
-      - 3000
+      - ${PORT}
     ports:
-      - 3000:3000
+      - ${PORT}:${PORT}
