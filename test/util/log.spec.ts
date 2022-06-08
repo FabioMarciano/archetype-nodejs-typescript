@@ -12,16 +12,16 @@ describe('Utils: log', () => {
 	});
 
 	it('Should outputs a log info', () => {
-		const { log } = require('../../src/Utils/');
+		const { log } = require('../../src/utils/');
 		const spy = jest.spyOn(log, 'info');
 		log.info(`Log Message`);
 		expect(spy).toHaveBeenCalled();
 	});
 
 	it('Should outputs a log info passing the log path environment', () => {
-		process.env.LOG_PATH = 'log';
+		process.env.LOG_DIR = 'log';
 
-		const { log } = require('../../src/Utils/');
+		const { log } = require('../../src/utils/');
 		const spy = jest.spyOn(log, 'error');
 		log.error(`Log Message`);
 		expect(spy).toHaveBeenCalled();

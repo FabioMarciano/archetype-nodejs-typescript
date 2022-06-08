@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+  # NodeJS api
   api:
     build: .
     env_file: .env
@@ -10,3 +11,22 @@ services:
       - ${PORT}
     ports:
       - ${PORT}:${PORT}
+
+  # Postgres relational database
+  psql:
+    image: postgres:14.3-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      - '${POSTGRES_PORT}:${POSTGRES_PORT}'
+    volumes:
+      - psql:/var/lib/postgresql/data
+      - ./cfg/postgres:/docker-entrypoint-initdb.d
+
+# Volumes
+volumes:
+  psql:
+    driver: local

@@ -1,9 +1,9 @@
-import { PingModel } from '../../src/Models';
-import { HttpStatus } from '../../src/Types';
+import { ping } from '../../src/models';
+import { HttpStatus } from '../../src/types';
 
 describe('Ping Model', () => {
 	it('Should get an HttpStatus.OK response', () => {
 		const expected: HttpStatus = HttpStatus.OK;
-		expect(PingModel()).toBe(expected);
+		expect(ping()).toBe(expected);
 	});
 });

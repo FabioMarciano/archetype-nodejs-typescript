@@ -4,7 +4,7 @@
 
 import winston from 'winston';
 
-const logBasePath = process.env.LOG_PATH ?? 'log';
+const { logDir = `log` } = { logDir: process.env.LOG_DIR };
 
 const log: winston.Logger = winston.createLogger({
 	format: winston.format.combine(
@@ -14,8 +14,8 @@ const log: winston.Logger = winston.createLogger({
 	),
 	transports: [
 		[
-			new winston.transports.File({ dirname: logBasePath, filename: 'error.log', level: 'error' }),
-			new winston.transports.File({ dirname: logBasePath, filename: 'info.log', level: 'info' }),
+			new winston.transports.File({ dirname: logDir, filename: 'error.log', level: 'error' }),
+			new winston.transports.File({ dirname: logDir, filename: 'info.log', level: 'info' }),
 		],
 		new winston.transports.Console(),
 	][Number(process.env.NODE_ENV !== 'production')],

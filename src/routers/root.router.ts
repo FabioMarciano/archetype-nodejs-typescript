@@ -3,12 +3,12 @@
  */
 
 import { Router, Request, Response } from 'express';
-import RootController from '../Controllers/root.controller';
+import controller from '../controllers/root.controller';
 
 const router: Router = Router();
 
 router.get('/', (request: Request, response: Response): void => {
-	RootController(request, response);
+	controller(request, response);
 });
 
 export default router;

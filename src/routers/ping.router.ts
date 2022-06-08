@@ -3,12 +3,12 @@
  */
 
 import { Router, Request, Response } from 'express';
-import PingController from '../Controllers/ping.controller';
+import controller from '../controllers/ping.controller';
 
 const router: Router = Router();
 
 router.get('/ping', (request: Request, response: Response) => {
-	PingController(request, response);
+	controller(request, response);
 });
 
 export default router;

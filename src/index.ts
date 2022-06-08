@@ -2,15 +2,15 @@
  * Index archetype file.
  */
 
-import log from './Utils/log';
+import log from './utils/log';
 import express from 'express';
-import Routers from './Routers';
+import routers from './routers';
 
 const app = express();
-const { port = '3000' } = { port: process.env.PORT };
-const { base = '/api' } = { base: process.env.API_BASE };
+const { port = `3000` } = { port: process.env.PORT };
+const { base = `/` } = { base: process.env.API_BASE };
 
-app.use(base, Routers);
+app.use(base, routers);
 
 try {
 	app.listen(port, () => {

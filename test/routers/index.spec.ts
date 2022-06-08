@@ -1,10 +1,10 @@
 import express from 'express';
 import request from 'supertest';
-import router from '../../src/Routers';
-import HttpStatus from '../../src/Types/http.status.type';
+import routers from '../../src/routers';
+import HttpStatus from '../../src/types/http.status.type';
 
 const http = express();
-http.use(router);
+http.use(routers);
 
 describe('Routers', () => {
 	describe('Root Router', () => {
