@@ -25,6 +25,8 @@ See _LICENSE_ file at project's root folder.
 - Docker / Docker Compose
 - Hot reload in development environment
 - Dotenv (environment variables)
+- Nunjucks (template engine)
+- Static public folder
 
 # Services
 

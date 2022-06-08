@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { ping } from '../../src/views';
-import { HttpStatus } from '../../src/types';
+import { ping } from '../../src/view';
+import { HttpStatus } from '../../src/type';
 
 const req = {} as Request;
 const res = {} as Response;

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { root } from '../../src/views';
+import { root } from '../../src/view';
 
 const req = {} as Request;
 const res = {} as Response;

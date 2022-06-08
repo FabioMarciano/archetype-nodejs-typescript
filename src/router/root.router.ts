@@ -3,7 +3,7 @@
  */
 
 import { Router, Request, Response } from 'express';
-import controller from '../controllers/root.controller';
+import controller from '../controller/root.controller';
 
 const router: Router = Router();
 

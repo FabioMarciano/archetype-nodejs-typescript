@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        {% block head %}
+        <meta charset="utf-8"/>
+        <title>Nunjucks Template</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+        {% endblock %}
+    </head>
+    <body>
+        {% block header %}
+			{% include "include/header.njk" %}
+		{% endblock %}
+		{% block main %}
+		<!-- MAIN -->
+		<main>
+			{% block content %}{% endblock %}
+		</main>
+		<!-- /MAIN -->
+		{% endblock %}
+		{% block footer %}
+			{% include "include/footer.njk" %}
+		{% endblock %}
+    </body>
+</html>

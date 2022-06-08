@@ -3,8 +3,8 @@
  */
 
 import { Request, Response } from 'express';
-import model from '../models/root.model';
-import view from '../views/root.view';
+import model from '../model/root.model';
+import view from '../view/root.view';
 
 export default (request: Request, response: Response): void => {
 	const message: string = model();

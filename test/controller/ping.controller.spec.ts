@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as controller from '../../src/controllers';
+import * as controller from '../../src/controller';
 
 const req = {} as Request;
 const res = {} as Response;

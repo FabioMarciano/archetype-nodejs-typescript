@@ -3,7 +3,7 @@
  */
 
 import { Router, Request, Response } from 'express';
-import controller from '../controllers/ping.controller';
+import controller from '../controller/ping.controller';
 
 const router: Router = Router();
 

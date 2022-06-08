@@ -3,9 +3,9 @@
  */
 
 import { Request, Response } from 'express';
-import HttpStatus from '../types/http.status.type';
-import model from '../models/ping.model';
-import view from '../views/ping.view';
+import HttpStatus from '../type/http.status.type';
+import model from '../model/ping.model';
+import view from '../view/ping.view';
 
 export default (request: Request, response: Response): void => {
 	const httpStatusCode: HttpStatus = model();

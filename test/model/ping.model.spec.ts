@@ -1,5 +1,5 @@
-import { ping } from '../../src/models';
-import { HttpStatus } from '../../src/types';
+import { ping } from '../../src/model';
+import { HttpStatus } from '../../src/type';
 
 describe('Ping Model', () => {
 	it('Should get an HttpStatus.OK response', () => {
