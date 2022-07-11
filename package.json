@@ -8,8 +8,8 @@
 		"test:watch": "jest --watchAll",
 		"coverage": "jest --coverage",
 		"lint": "eslint . --ext .ts",
-		"build": "rm -rf dist && tsc",
-		"start": "npm run build && node -r dotenv/config dist/index.js",
+		"build": "rm -rf dist && ./node_modules/.bin/tsc",
+		"start": "npm run build && node dist/index.js",
 		"dev": "ts-node-dev -r dotenv/config ./src/index.ts"
 	},
 	"keywords": [

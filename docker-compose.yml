@@ -26,7 +26,22 @@ services:
       - psql:/var/lib/postgresql/data
       - ./cfg/postgres:/docker-entrypoint-initdb.d
 
+  # Redis cache database
+  redis:
+    image: redis:7.0.2-alpine
+    restart: always
+    ports:
+      - '${REDIS_PORT}:${REDIS_PORT}'
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - redis:/data
+
+  # NoSQL
+  # Queue
+
 # Volumes
 volumes:
   psql:
+    driver: local
+  redis:
     driver: local
